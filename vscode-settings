@@ -1,5 +1,13 @@
 {
-    "editor.fontSize": "12",
+    "editor.fontFamily": "Fira Code",
+    "editor.fontLigatures": true,
+    "editor.fontSize": 13,
+    "editor.autoClosingBrackets": false,
+    "editor.lineNumbers": "relative",
+    "editor.lineHeight": 23,
+    "editor.cursorStyle": "block-outline",
+    "editor.cursorBlinking": "phase",
+    "editor.snippetSuggestions": "top",
     "workbench.editor.enablePreview": false,
     "zenMode.hideTabs": false,
     "window.menuBarVisibility": "toggle",
@@ -9,83 +17,113 @@
         "**/.hg": true,
         "**/CVS": true,
         "**/.DS_Store": true,
-        "**/node_modules": true
+        "**/node_modules": true,
+        "**/elm-stuff": true
     },
-    "terminal.integrated.fontSize": "12",
+    "terminal.integrated.fontSize": 12,
     "editor.minimap.enabled": false,
-    "vim.useCtrlKeys": false,
     "vim.leader": "<space>",
-    "vim.disableAnnoyingNeovimMessage": true,
     "vim.easymotion": true,
+    "vim.easymotionMarkerBackgroundColor": "#107896",
+    "vim.easymotionMarkerForegroundColorOneChar": "#ffffff",
+    "vim.easymotionMarkerForegroundColorTwoChar": "#ffffff",
     "vim.hlsearch": true,
     "vim.easymotionMarkerFontSize": "12",
     "vim.easymotionMarkerFontFamily": "Menlo",
-    "vim.otherModesKeyBindingsNonRecursive": [
+    "vim.useCtrlKeys": false,
+    "vim.statusBarColorControl": false,
+    "vim.otherModesKeyBindingsNonRecursive": [{
+            "before": [
+                "<ctrl>",
+                "s"
+            ],
+            "after": [
+                "<esc>"
+            ]
+        },
         {
             "before": [
                 ":"
             ],
-            "commands": [
-                {
-                    "command": "workbench.action.showCommands"
-                }
-            ]
+            "commands": [{
+                "command": "workbench.action.showCommands"
+            }]
+        },
+        {
+            "before": ["<leader>", "l"],
+            "commands": [{
+                "command": "workbench.view.scm"
+            }]
+        },
+        {
+            "before": ["<leader>", "c"],
+            "after" : ["b","v","w","h"]
+        },
+        {
+            "before": [
+                "<leader>",
+                "w"
+            ],
+            "commands": [{
+                "command": "workbench.action.closeActiveEditor",
+                "args": []
+            }]
+        },
+        {
+            "before": [
+                "<leader>",
+                "d"
+            ],
+            "commands": [{
+                "command": "workbench.action.gotoSymbol",
+                "args": []
+            }]
         },
         {
             "before": [
                 "<leader>",
                 "f"
             ],
-            "commands": [
-                {
-                    "command": "keybindings.editor.searchKeybindings",
-                    "args": []
-                }
-            ]
+            "commands": [{
+                "command": "keybindings.editor.searchKeybindings",
+                "args": []
+            }]
         },
         {
             "before": [
                 "<leader>",
                 "g"
             ],
-            "commands": [
-                {
-                    "command": "filesExplorer.findInFolder"
-                }
-            ]
+            "commands": [{
+                "command": "filesExplorer.findInFolder"
+            }]
         },
         {
             "before": [
                 "<leader>",
                 "j"
             ],
-            "commands": [
-                {
-                    "command": "workbench.action.previousEditor"
-                }
-            ]
+            "commands": [{
+                "command": "workbench.action.previousEditor"
+            }]
         },
         {
             "before": [
                 "<leader>",
                 "k"
             ],
-            "commands": [
-                {
-                    "command": "workbench.action.nextEditor"
-                }
-            ]
+            "commands": [{
+                "command": "workbench.action.nextEditor"
+            }]
         },
         {
             "before": [
                 "<leader>",
                 "m"
             ],
-            "commands": [
-                {
-                    "command": "workbench.action.focusActiveEditorGroup"
-                }
-            ]
+            "commands": [{
+                "command": "workbench.action.focusActiveEditorGroup"
+            }]
         },
         {
             "before": [
@@ -95,77 +133,69 @@
             "after": [
                 "<esc>"
             ],
-            "commands": [
-                {
-                    "command": "workbench.action.quickOpen"
-                }
-            ]
-        },
-        {
-            "before": [
-                "<leader>",
-                "s"
-            ],
-            "after": [],
-            "commands": [
-                {
-                    "command": "workbench.action.files.save"
-                }
-            ]
+            "commands": [{
+                "command": "workbench.action.quickOpen"
+            }]
         },
         {
             "before": [
                 "<leader>",
                 "t"
             ],
-            "commands": [
-                {
-                    "command": "workbench.action.toggleZenMode"
-                }
-            ]
+            "commands": [{
+                "command": "workbench.action.toggleZenMode"
+            }]
         },
         {
             "before": [
                 "<leader>",
-                "w"
+                "q"
             ],
             "after": [],
-            "commands": [
-                {
-                    "command": "workbench.action.closeActiveEditor"
-                }
-            ]
+            "commands": [{
+                "command": "workbench.action.closeActiveEditor"
+            }]
         }
     ],
-    "vim.insertModeKeyBindings": [
-        {
-            "before": [
-                "j",
-                "j"
-            ],
-            "after": [
-                "<Esc>"
-            ],
-            "commands": [
-                {
-                    "command": "workbench.action.files.save"
-                }
-            ]
-        }
-    ],
-    "vim.handleKeys": {
-        "<C-c>": false,
-        "<C-f>": false
-    },
-    "vim.statusBarColorControl": false,
-    "workbench.colorTheme": "One Dark Pro",
+    "vim.insertModeKeyBindings": [{
+        "before": [
+            "j",
+            "j"
+        ],
+        "after": [
+            "<Esc>"
+        ],
+        "commands": [{
+            "command": "workbench.action.files.save"
+        }]
+    }],
     "workbench.statusBar.visible": true,
     "workbench.sideBar.location": "right",
-    "workbench.iconTheme": "vscode-great-icons",
+    "workbench.colorTheme": "One Monokai",
+    "workbench.iconTheme": "material-icon-theme",
     "workbench.colorCustomizations": {
         "statusBar.foreground": "#eee"
     },
-    "vim.easymotionMarkerBackgroundColor": "#107896",
-    "vim.easymotionMarkerForegroundColorOneChar": "#ffffff",
-    "vim.easymotionMarkerForegroundColorTwoChar": "#ffffff"
+    "window.zoomLevel": 0,
+    "typescript.check.npmIsInstalled": false,
+    "macros": {
+        "save": [
+            "workbench.action.files.save",
+            "extension.vim_escape"
+        ]
+    },
+    "gitlens.advanced.messages": {
+        "suppressCommitHasNoPreviousCommitWarning": false,
+        "suppressCommitNotFoundWarning": false,
+        "suppressFileNotUnderSourceControlWarning": false,
+        "suppressGitVersionWarning": false,
+        "suppressLineUncommittedWarning": false,
+        "suppressNoRepositoryWarning": false,
+        "suppressUpdateNotice": true,
+        "suppressWelcomeNotice": true
+    },
+    "material-icon-theme.showUpdateMessage": false,
+    "git.autofetch": true,
+    "workbench.statusBar.feedback.visible": false,
+    "gitlens.keymap": "alternate"
 }
