@@ -1,1 +1,28 @@
+let mapleader=" "
+
 imap jj <Esc>:action SaveAll<cr>
+
+"Editor Level"
+nmap <leader>k :action NextTab<CR>
+nmap <leader>j :action PreviousTab<CR>
+
+nmap <leader>x :action Unsplit<CR>
+nmap <leader>s :action SplitVertically<CR>
+nmap <leader>l :action NextSplitter<CR>
+
+nmap + :action EditorIncreaseFontSize<CR>
+nmap _ :action EditorDecreaseFontSize<CR>
+nmap = :action EditorResetFontSize<CR>
+
+"File Level Changes"
+nmap <leader><leader> :action SaveAll<CR>
+nmap <leader>w :action VimFileSaveClose<CR>
+nmap <leader>W :action CloseAllEditors<CR>
+nmap <leader>o :action GotoFile<CR>
+
+"Tool Window"
+nmap <leader>t :action ActivateTerminalToolWindow<CR>
+nmap <leader>z :action HideAllWindows<CR>
+
+"Build"
+nmap <leader>r :action ChooseRunConfiguration<CR>
