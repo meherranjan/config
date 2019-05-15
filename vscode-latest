@@ -1,0 +1,26 @@
+{
+    "workbench.colorTheme": "Horizon Bold",
+    "editor.suggestSelection": "first",
+    "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
+    "editor.fontFamily": "Hasklig, 'Courier New', monospace",
+    "editor.fontLigatures": true,
+    "editor.cursorBlinking": "phase",
+    "editor.fontSize": 16,
+    "editor.minimap.enabled": false,
+    "files.autoSave": "afterDelay",
+    "editor.tabSize": 2,
+    "editor.lineNumbers": "off",
+    "workbench.sideBar.location": "right",
+    "window.zoomLevel": 0,
+    "editor.snippetSuggestions": "top",
+    "emmet.showSuggestionsAsSnippets": true,
+    "files.exclude": {
+        "**/elm-stuff": true,
+        "**/node_modules": true
+    },
+    "terminal.integrated.fontSize": 14,
+    "terminal.integrated.fontFamily": "Hasklig",
+    "vim.leader": "<space>",
+    "vim.hlsearch": true,
+    "vim.easymotion": true,
+}
