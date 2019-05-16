@@ -84,3 +84,10 @@
         ]
     }
 }
+
+// Not part of vscode settings but needed for the macros save command 
+// to get the editor out of insert mode and switch to normal mode.
+[{
+  "key": "cmd+s",
+  "command": "macros.save",
+}]
