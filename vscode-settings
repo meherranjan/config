@@ -1,93 +1,284 @@
 {
+    "macros": {
+      "save": [
+        "workbench.action.files.save",
+        "extension.vim_escape"
+      ]
+    },
     "workbench.colorTheme": "Horizon Bold",
     "editor.suggestSelection": "first",
     "editor.fontFamily": "Hasklig, 'Courier New', monospace",
     "editor.fontLigatures": true,
     "editor.cursorBlinking": "phase",
-    "editor.fontSize": 16,
+    "editor.fontSize": 14,
     "editor.minimap.enabled": false,
     "editor.tabSize": 2,
-    "editor.lineNumbers": "off",
+    "editor.lineNumbers": "relative",
     "workbench.sideBar.location": "right",
     "window.zoomLevel": 0,
     "editor.snippetSuggestions": "top",
     "emmet.showSuggestionsAsSnippets": true,
     "files.exclude": {
-        "**/elm-stuff": true,
-        "**/node_modules": true
+      "**/elm-stuff": true,
+      "**/node_modules": true
     },
+    "workbench.statusBar.feedback.visible": false,
+    "emmet.triggerExpansionOnTab": true,
+    "terminal.integrated.shell.windows": "C:\\WINDOWS\\System32\\cmd.exe",
     "terminal.integrated.fontSize": 14,
     "terminal.integrated.fontFamily": "Hasklig",
     "terminal.integrated.lineHeight": 1.3,
-    "editor.lineHeight": 25,
+    "editor.lineHeight": 30,
     "vim.leader": "<space>",
     "vim.hlsearch": true,
     "vim.easymotion": true,
+    "vim.surround": true,
+    "vim.handleKeys": {
+      "<C-f>": false,
+      "<C-a>": false
+    },
     "vim.insertModeKeyBindings": [
-        {
-            "before": ["j", "j"],
-            "after": ["<Esc>"],
-            "commands": ["workbench.action.files.save"]
-        }
+      {
+        "before": [
+          "j",
+          "j"
+        ],
+        "after": [
+          "<Esc>"
+        ],
+        "commands": [
+          "workbench.action.files.save"
+        ]
+      }
+    ],
+    "vim.visualModeKeyBindingsNonRecursive": [
+      {
+        "before": [
+          "s"
+        ],
+        "commands": [
+          "surround.with.element"
+        ]
+      },
+      {
+        "before": [
+          "p"
+        ],
+        "commands": [
+          "surround.with"
+        ]
+      },
+      {
+        "before": [
+          ">"
+        ],
+        "commands": [
+          "editor.action.indentLines"
+        ]
+      },
+      {
+        "before": [
+          "<"
+        ],
+        "commands": [
+          "editor.action.outdentLines"
+        ]
+      }
     ],
     "vim.normalModeKeyBindingsNonRecursive": [
-        {
-            "before": [":"],
-            "commands": ["workbench.action.showCommands"]
-        },
-        {
-            "before": ["<leader>", "c"],
-            "after" : ["b", "v", "w", "h", "y"]
-        },
-        {
-            "before": ["<leader>", "w"],
-            "commands": ["workbench.action.closeActiveEditor"]
-        },
-        {
-            "before": ["<leader>", "f"],
-            "commands": ["keybindings.editor.searchKeybindings"],
-        },
-        {
-            "before": ["<leader>", "g"],
-            "commands": ["filesExplorer.findInFolder"]
-        },
-        {
-            "before": ["<leader>", "j"],
-            "commands": ["workbench.action.previousEditor"]
-        },
-        {
-            "before": ["<leader>", "k"],
-            "commands": ["workbench.action.nextEditor"]
-        },
-        {
-            "before": ["<leader>", "m"],
-            "commands": ["workbench.action.focusActiveEditorGroup"]
-        },
-        {
-            "before": ["<leader>", "o"],
-            "after": ["<esc>"],
-            "commands": ["workbench.action.quickOpen"]
-        },
-        {
-            "before": ["<leader>", "t"],
-            "commands": ["workbench.action.toggleZenMode"]
-        },
-        {
-            "before": ["<leader>", "q"],
-            "commands": ["workbench.action.closeActiveEditor"]
-        }
-    ],
-    "macros": {
-        "save": [
-            "workbench.action.files.save",
-            "extension.vim_escape"
+      {
+        "before": [
+          "<leader>",
+          "["
+        ],
+        "commands": [
+          "editor.fold"
         ]
-    }
-}
-
-// Not part of vscode settings but needed for the macros save command 
-// to get the editor out of insert mode and switch to normal mode.
-[{
-  "key": "cmd+s",
-  "command": "macros.save",
-}]
+      },
+      {
+        "before": [
+          "<leader>",
+          "]"
+        ],
+        "commands": [
+          "editor.unfold"
+        ]
+      },
+      {
+        "before": [
+          "<leader>",
+          "h"
+        ],
+        "commands": [
+          "editor.action.revealDefinition"
+        ]
+      },
+      {
+        "before": [
+          "<leader>",
+          "e"
+        ],
+        "commands": [
+          "workbench.files.action.showActiveFileInExplorer"
+        ]
+      },
+      {
+        "before": [
+          "<leader>",
+          ","
+        ],
+        "after": [
+          "g",
+          "g",
+          "V",
+          "G",
+          "=",
+          "g",
+          "i",
+          "<Esc>"
+        ]
+      },
+      {
+        "before": [
+          "<leader>",
+          "t"
+        ],
+        "commands": [
+          "workbench.action.terminal.toggleTerminal"
+        ]
+      },
+      {
+        "before": [
+          "<leader>",
+          "S"
+        ],
+        "commands": [
+          "workbench.action.files.saveAll"
+        ]
+      },
+      {
+        "before": [
+          "<leader>",
+          "p"
+        ],
+        "commands": [
+          "surround.with.element"
+        ]
+      },
+      {
+        "before": [
+          ":"
+        ],
+        "commands": [
+          "workbench.action.showCommands"
+        ]
+      },
+      {
+        "before": [
+          "<leader>",
+          "c"
+        ],
+        "after": [
+          "b",
+          "v",
+          "w",
+          "h",
+          "y"
+        ]
+      },
+      {
+        "before": [
+          "<leader>",
+          "w"
+        ],
+        "commands": [
+          "workbench.action.files.save",
+          "workbench.action.closeActiveEditor"
+        ]
+      },
+      {
+        "before": [
+          "<leader>",
+          "f"
+        ],
+        "commands": [
+          "keybindings.editor.searchKeybindings"
+        ],
+        
+      },
+      {
+        "before": [
+          "<leader>",
+          "g"
+        ],
+        "commands": [
+          "filesExplorer.findInFolder"
+        ]
+      },
+      {
+        "before": [
+          "<leader>",
+          "j"
+        ],
+        "commands": [
+          "workbench.action.previousEditor"
+        ]
+      },
+      {
+        "before": [
+          "<leader>",
+          "k"
+        ],
+        "commands": [
+          "workbench.action.nextEditor"
+        ]
+      },
+      {
+        "before": [
+          "<leader>",
+          "m"
+        ],
+        "commands": [
+          "workbench.action.focusActiveEditorGroup"
+        ]
+      },
+      {
+        "before": [
+          "<leader>",
+          "o"
+        ],
+        "after": [
+          "<esc>"
+        ],
+        "commands": [
+          "workbench.action.quickOpen"
+        ]
+      },
+      {
+        "before": [
+          "<leader>",
+          "z"
+        ],
+        "commands": [
+          "workbench.action.toggleZenMode",
+          "workbench.action.toggleCenteredLayout"
+        ]
+      },
+      {
+        "before": [
+          "<leader>",
+          "q"
+        ],
+        "commands": [
+          "workbench.action.closeActiveEditor"
+        ]
+      },
+      
+    ],
+    "javascript.updateImportsOnFileMove.enabled": "always",
+    "git.autofetch": true,
+    "explorer.confirmDragAndDrop": false,
+    "explorer.confirmDelete": false,
+    "breadcrumbs.filePath": "off",
+    "workbench.settings.editor": "json"
+  }
