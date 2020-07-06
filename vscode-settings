@@ -280,5 +280,8 @@
     "explorer.confirmDragAndDrop": false,
     "explorer.confirmDelete": false,
     "breadcrumbs.filePath": "off",
-    "workbench.settings.editor": "json"
+    "workbench.settings.editor": "json",
+    "workbench.editor.enablePreview": false,
+    "oneDarkPro.vivid": true,
+    "oneDarkPro.bold": true
   }
