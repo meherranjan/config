@@ -129,8 +129,7 @@
     {
       "before": ["z"],
       "commands": [
-        "workbench.action.toggleZenMode",
-        "workbench.action.toggleCenteredLayout"
+        "workbench.action.toggleZenMode"
       ]
     },
     {
