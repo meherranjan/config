@@ -1,0 +1,18 @@
+[
+  {
+  "key": "cmd+t",
+  "command": "-workbench.action.showAllSymbols"
+},
+{
+  "key": "shift+cmd+x",
+  "command": "workbench.action.terminal.toggleTerminal"
+},
+{
+  "key": "ctrl+`",
+  "command": "-workbench.action.terminal.toggleTerminal"
+},
+{
+  "key": "shift+cmd+x",
+  "command": "-workbench.view.extensions"
+}
+]
