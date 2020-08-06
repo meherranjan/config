@@ -37,6 +37,7 @@
     "<C-s>": false,
     "<C-v>": false,
     "<C-f>": false,
+    "<C-w>": false,
   },
   "vim.hlsearch": true,
   "vim.insertModeKeyBindings": [
